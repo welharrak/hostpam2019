@@ -1,0 +1,8 @@
+#%PAM-1.0
+auth       optional	pam_echo.so	[auth: %h %s %t %u]
+auth	   sufficient   pam_unix.so 
+auth	   required     pam_deny.so
+#auth 	   required     pam_succeed_if.so uid > 1000
+#auth 	   required     pam_succeed_if.so user != local2
+account    optional     pam_echo.so     [account: %h %s %t %u]
+account    required     pam_time.so 
