@@ -4,8 +4,9 @@ LABEL version="1.0"
 LABEL author="WalidElHarrak"
 LABEL subject="hostpam"
 RUN dnf update -y vi
-RUN dnf -y install procps iproute nmap vim util-linux-user finger passwd pam_mount
+RUN dnf -y install procps iproute nmap vim util-linux-user finger passwd pam_mount nfs-utils
 RUN mkdir /opt/docker
 COPY * /opt/docker/
 RUN chmod +x /opt/docker/startup.sh
 WORKDIR /opt/docker
+
