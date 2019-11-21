@@ -1,0 +1,6 @@
+#%PAM-1.0
+auth       include     chfn_walid
+auth       optional    pam_echo.so [ al fitxer, he posat substack  ]
+account    sufficient  pam_permit.so
+#password   include      system-auth
+#session    include      system-auth
