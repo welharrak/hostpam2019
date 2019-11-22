@@ -1,0 +1,21 @@
+#3
+#session    [ success=1 default=ignore ]     pam_succeed_if.so debug uid = 1001
+#session    sufficient    pam_deny.so
+#session    sufficient    pam_permit.so
+#4
+#session    [ success=1 default=ignore ]  pam_succeed_if.so debug uid = 1001
+#session    sufficient  pam_deny.so
+#session    optional    pam_echo.so [ uid correcte! ]
+#session    sufficient  pam_permit-so
+#5
+#session    [ success=2 default=ignore ]   pam_succeed_if.so debug uid = 1001
+#session    optional    pam_echo.so [ uid incorrecte! ]
+#session    sufficient  pam_deny.so
+#session    sufficient  pam_permit.so
+#6
+#session    [ success=2 default=ignore ]   pam_succeed_if.so debug uid = 1001
+#session    optional    pam_echo.so [ uid incorrecte! ]
+#session    sufficient  pam_deny.so
+#session    optional    pam_echo.so [ uid correcte! ]
+#session    sufficient  pam_permit.so
+
