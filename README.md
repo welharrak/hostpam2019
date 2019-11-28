@@ -1,5 +1,16 @@
-# hostpam2019
+# la prova es troba en el directori hostpam19:prova
 
-- base: modificacions d'archius pam per provar, com pam\_mount, pam\_time i moltes més...
+##prova pam walid
+- He creat un fitxer pamaware.py que comprova si el que l'executa es un usuari unix.
 
-- auth: configuracio per poder validarnos amb usuaris ldap amb nss-pam-ldapd.
+- Seguidament he crat un modul pam anomenat pam\_mates.py que fa una pregunta matematica que cal resoldre per superar l'auntenticacio, per fer aixo m'he hagut de descarregar  pam-python-1.0.7.tar.gz i descomprimir-ho; editar línia 201 de: \/usr\/include\/features.h canviant 700 per 600 en la línia  define \_XOPEN_SOURCE 700 i seguidament fer un make del directori src per crear pam_mount.so i aquest copiar-ho a /usr/lib64/security.
+
+- L'imatge te dos usuairs locals, anna i walid, i la contrasenya es el mateix nom d'usuari.
+
+- Finalment he editat el modul chfn per tal que utilizi el modul pam\_mates.
+
+### Per comprovar:
+
+- Amb un usuari fer python /opt/docker/pamaware.py y et contestara o succes o fail.
+
+- Fent un chfn, et preguntara un problema matematic, si el respons correctament , et deixara canviar el teu finger, si falles, no,
