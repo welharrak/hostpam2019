@@ -11,6 +11,7 @@
 
 ### Per comprovar:
 
-- Amb un usuari fer python /opt/docker/pamaware.py y et contestara o succes o fail.
 
-- Fent un chfn, et preguntara un problema matematic, si el respons correctament , et deixara canviar el teu finger, si falles, no,
+- Comprobar amb python pamaware.py, si el usuari posat existeix o no.
+
+- Com a usuari local, fent un chfn, et preguntara un problema matematic, si el respons correctament , et deixara canviar el teu finger, si falles, no.
